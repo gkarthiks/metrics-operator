@@ -1,0 +1,7 @@
+apiVersion: gkarthiks.io/v1alpha1
+kind: Metrics
+metadata:
+  name: example-metrics
+spec:
+  # Add fields here
+  size: 1
