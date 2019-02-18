@@ -1,7 +1,16 @@
 apiVersion: gkarthiks.io/v1alpha1
 kind: Metrics
 metadata:
-  name: example-metrics
+  name: metrics-ops
 spec:
-  # Add fields here
   size: 1
+  prometheus:
+    image: "prom/prometheus:v2.7.1"
+    imagePullPolicy: IfNotPresent
+    resources:
+      limits:
+        cpu: 1
+        memory: 1Gi
+      requests:
+        cpu: 100m
+        memory: 256Mi
